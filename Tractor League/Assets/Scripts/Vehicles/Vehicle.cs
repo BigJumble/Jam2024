@@ -1,10 +1,11 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Vehicle : Entity
 {
     public float maxSteerAngle = 30f;
-    public Transform leftWheel, rightWheel;
+    public Transform leftWheel, rightWheel, frontChar;
     public float moveSpeed = 5f;
     public float turnSpeed = 5f;
 
@@ -12,6 +13,12 @@ public class Vehicle : Entity
     private Rigidbody2D rb;
 
     private float xValue, yValue;
+
+    [SerializeField]
+    private List<Animator> tireAnimators;
+
+    [SerializeField]
+    private Animator exhaustAnimator;
 
     void Start()
     {
@@ -21,7 +28,7 @@ public class Vehicle : Entity
     private void Update()
     {
         // Get input
-        //xValue = Input.GetAxis("Horizontal");
+        xValue = Input.GetAxis("Horizontal");
 
         // Calculate target wheel angle
         float targetWheelAngle = maxSteerAngle * xValue;
@@ -32,12 +39,14 @@ public class Vehicle : Entity
         // Apply rotation to wheel transform
         leftWheel.localEulerAngles = new Vector3(0, 0, wheelAngle);
         rightWheel.localEulerAngles = new Vector3(0, 0, wheelAngle);
+        if(frontChar != null)
+            frontChar.localEulerAngles = new Vector3(0, 0, wheelAngle);
     }
 
     private void FixedUpdate()
     {
         // Get input
-        //yValue = Input.GetAxis("Vertical");
+        yValue = Input.GetAxis("Vertical");
 
         rb.angularDrag = Input.GetKey(KeyCode.Space) ? 1.5f : 4f;
 
@@ -50,6 +59,13 @@ public class Vehicle : Entity
 
         if(Mathf.Abs(yValue) > 0)
             rb.AddTorque(turnAmount * Mathf.Sign(yValue));
+
+        // Update tire animations
+        foreach(var tireAnimator in tireAnimators)
+        {
+            tireAnimator.SetBool("Rolling", rb.velocity.magnitude > 0f);
+            tireAnimator.SetFloat("Speed", transform.InverseTransformDirection(rb.velocity).y / 3f);   
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
