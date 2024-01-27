@@ -8,6 +8,7 @@ public class Vehicle : Entity
     public Transform leftWheel, rightWheel, frontChar;
     public float moveSpeed = 5f;
     public float turnSpeed = 5f;
+    public int wheelDirection = 1;
 
     private float wheelAngle = 0f;
     private Rigidbody2D rb;
@@ -28,10 +29,10 @@ public class Vehicle : Entity
     private void Update()
     {
         // Get input
-        //xValue = Input.GetAxis("Horizontal");
+        xValue = Input.GetAxis("Horizontal");
 
         // Calculate target wheel angle
-        float targetWheelAngle = maxSteerAngle * xValue;
+        float targetWheelAngle = maxSteerAngle * xValue * wheelDirection;
 
         // Smoothly rotate wheel to target angle
         wheelAngle = Mathf.Lerp(wheelAngle, targetWheelAngle, Time.deltaTime * turnSpeed);
@@ -46,7 +47,7 @@ public class Vehicle : Entity
     private void FixedUpdate()
     {
         // Get input
-        //yValue = Input.GetAxis("Vertical");
+        yValue = Input.GetAxis("Vertical");
 
         rb.angularDrag = Input.GetKey(KeyCode.Space) ? 1.5f : 4f;
 
@@ -55,7 +56,7 @@ public class Vehicle : Entity
         rb.AddForce(transform.up * moveAmount);
 
         // Apply rotation based on wheel angle
-        float turnAmount = wheelAngle / maxSteerAngle * moveSpeed * Time.fixedDeltaTime;
+        float turnAmount = wheelAngle / maxSteerAngle * moveSpeed * Time.fixedDeltaTime * wheelDirection;
 
         if(Mathf.Abs(yValue) > 0)
             rb.AddTorque(turnAmount * Mathf.Sign(yValue));

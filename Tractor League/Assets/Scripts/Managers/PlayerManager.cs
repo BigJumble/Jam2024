@@ -14,8 +14,15 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         None,
     }
 
+    public enum Character
+    {
+        Savickas,
+        Bielka,
+        Nauseda
+    }
+
     [SerializeField]
-    private GameObject playerPrefab;
+    private List<GameObject> playerPrefabs;
 
     [SerializeField]
     private Dictionary<string, Player> players;
@@ -55,7 +62,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     {
         foreach(var (uuid, input) in state)
         {
-            Player p = ResolvePlayer(uuid);
+            Player p = ResolvePlayer(uuid, (Character)input.characterID);
             SetTeam(p, (Team)input.team);
             p.Touch(input.joystickX, input.joystickY, input.received);
         }
@@ -82,20 +89,20 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         Destroy(player.gameObject);
     }
 
-    private Player ResolvePlayer(string uuid)
+    private Player ResolvePlayer(string uuid, Character character)
     {
         if (!players.TryGetValue(uuid, out Player player))
         {
-            player = CreatePlayer(uuid);
+            player = CreatePlayer(uuid, character);
             players[uuid] = player;
         }
         return player;
     }
 
-    private Player CreatePlayer(string uuid)
+    private Player CreatePlayer(string uuid, Character character)
     {
         Debug.Log("[Create Player]");
-        var player = Instantiate(playerPrefab).GetComponent<Player>();
+        var player = Instantiate(playerPrefabs[(int)character]).GetComponent<Player>();
         RespawnPlayer(player);
         player.Init(this, uuid);
 
@@ -178,7 +185,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
             playerInput.team = int.Parse(dataParts[2]) - 1;
             playerInput.joystickX = float.Parse(dataParts[3]);
             playerInput.joystickY = float.Parse(dataParts[4]);
-            playerInput.characterID = int.Parse(dataParts[5]);
+            playerInput.characterID = int.Parse(dataParts[5]) - 1;
             playerInput.soundEffectID = int.Parse(dataParts[6]);
             playerInput.received = DateTime.UtcNow;
 
