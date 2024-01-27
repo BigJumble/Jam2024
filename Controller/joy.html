@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Joystick</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Honk&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+
+        * {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-size: 8px;
+            font-style: normal;
+        }
+
+        label {
+            color: white;
+        }
+
+        body {
+            background-color: #006d1a;
+        }
+
+        #joystick-container {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            bottom: 0;
+            margin: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+            touch-action: none;
+        }
+
+        #joystick {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 50%;
+            left: 50%;
+            background-color: #3498db;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .image-container img {
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+        }
+
+        .selected {
+            border: 2px solid red;
+        }
+
+        #userinput {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        .button-container {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+        }
+
+        .button-container button {
+            margin-left: 10px;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="userinput">
+        <label for="ip-input">IP Address:</label>
+        <input type="text" id="ip-input" placeholder="Enter IP address" value="localhost"
+            oninput="updateIP(this.value)" />
+
+        <label for="name-input">Name:</label>
+        <input type="text" id="name-input" placeholder="Enter your name" oninput="updateName(this.value)" />
+
+        <form>
+            <label>
+                <input type="radio" name="team" value="team1" onchange="selectTeam(1)" />
+                Team 1
+            </label>
+
+            <label>
+                <input type="radio" name="team" value="team2" onchange="selectTeam(2)" />
+                Team 2
+            </label>
+        </form>
+
+        <button onclick="connectBro()">Connect</button>
+    </div>
+
+    <div class="image-container">
+        <img src="image1.png" id="img-1" alt="Image 1" onclick="selectImage(1)" />
+        <img src="image2.png" id="img-2" alt="Image 2" onclick="selectImage(2)" />
+        <img src="image3.png" id="img-3" alt="Image 3" onclick="selectImage(3)" />
+        <img src="image4.png" id="img-4" alt="Image 4" onclick="selectImage(4)" />
+        <img src="image5.png" id="img-5" alt="Image 5" onclick="selectImage(5)" />
+    </div>
+
+    <div class="button-container">
+        <button onclick="selectSound(1)">Say 1</button>
+        <button onclick="selectSound(2)">Say 2</button>
+        <button onclick="selectSound(3)">Say 3</button>
+    </div>
+
+    <div id="joystick-container">
+        <div id="joystick"></div>
+    </div>
+
+    <script>
+        const dat = new Date();
+        let UUID = Date.now();
+        let JoyX = 0,
+            JoyY = 0;
+        document.addEventListener("DOMContentLoaded", function () {
+            const joystickContainer = document.getElementById("joystick-container");
+            const joystick = document.getElementById("joystick");
+
+            let joystickIsActive = false;
+
+            joystickContainer.addEventListener("touchstart", (event) => {
+                joystickIsActive = true;
+                updateJoystickPosition(event.touches[0]);
+            });
+
+            joystickContainer.addEventListener("touchmove", (event) => {
+                if (joystickIsActive) {
+                    event.preventDefault();
+                    updateJoystickPosition(event.touches[0]);
+                }
+            });
+
+            joystickContainer.addEventListener("touchend", () => {
+                joystickIsActive = false;
+                resetJoystickPosition();
+            });
+
+            function updateJoystickPosition(touch) {
+                const centerX = joystickContainer.clientWidth / 2;
+                const centerY = joystickContainer.clientHeight / 2;
+
+                const deltaX = touch.clientX - joystickContainer.offsetLeft - centerX;
+                const deltaY = touch.clientY - joystickContainer.offsetTop - centerY;
+
+                let distance = Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+                const angle = Math.atan2(deltaY, deltaX);
+                if (distance > 75) distance = 75;
+                const newX = centerX + Math.cos(angle) * distance;
+                const newY = centerY + Math.sin(angle) * distance;
+
+                joystick.style.left = `${newX}px`;
+                joystick.style.top = `${newY}px`;
+
+                JoyX = (newX - 75)/75;
+                JoyY = (-newY + 75)/75;
+            }
+
+            function resetJoystickPosition() {
+                joystick.style.left = "50%";
+                joystick.style.top = "50%";
+                JoyX = 0;
+                JoyY = 0;
+            }
+        });
+
+        // Character selection:
+        let selectedImage = null;
+        CharacterID = 0;
+        function selectImage(imageNumber) {
+            if (selectedImage !== null)
+                document
+                    .getElementById(`img-${selectedImage}`)
+                    .classList.remove("selected");
+
+            document.getElementById(`img-${imageNumber}`).classList.add("selected");
+            selectedImage = imageNumber;
+            CharacterID = imageNumber;
+        }
+
+        //Team change
+        let team = 1;
+        function selectTeam(num) {
+            team = num;
+        }
+        //Sound Select
+        let SoundID = 0;
+        function selectSound(num) {
+            SoundID = num;
+        }
+
+        //Update ip
+        let ip = "localhost";
+        function updateIP(ip2) {
+            ip = ip2;
+        }
+
+        //Update name
+        let name = "NAMELESS";
+        function updateName(nam) {
+            name = nam;
+        }
+
+        //server stuff
+
+        function connectBro() {
+            const socket = new WebSocket(`ws://${ip}:4649/Echo`);
+
+            // setInterval(StreamUserInput, 50); // PUT THIS IN socket OPEN // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+            socket.addEventListener("open", (event) => {
+                console.log("Connected to WebSocket server");
+                setInterval(StreamUserInput, 50);
+            });
+
+            function StreamUserInput() {
+                console.log(
+                    `${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`
+                );
+                socket.send(`${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`);  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                SoundID = 0;
+            }
+
+            socket.addEventListener("message", (event) => {
+                console.log("Message from server:", event.data);
+            });
+            socket.addEventListener("close", (event) => {
+                console.log("Connection closed:", event);
+                clearInterval(StreamUserInput);
+            });
+            socket.addEventListener("error", (event) => {
+                console.error("WebSocket Error:", event);
+            });
+        }
+    </script>
+</body>
+
+</html>
