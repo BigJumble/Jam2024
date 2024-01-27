@@ -77,7 +77,6 @@ public class Vehicle : Entity
 
     public void SetInput(float x, float y)
     {
-        Debug.Log($"SETTING INPUT IN VEHICLE {x} {y}");
         xValue = x;
         yValue = y;
     }

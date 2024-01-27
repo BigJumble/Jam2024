@@ -47,8 +47,6 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
 
     public void HandleMessage(Player.Input msg)
     {
-        //Debug.Log($"{msg.uuid}|{msg.name}|{msg.team}|{msg.joystickX}|{msg.joystickY}|{msg.characterID}|{msg.soundEffectID}");
-
         state.AddOrUpdate(msg.uuid, msg, (oldKey, oldValue) => msg);
     }
 
