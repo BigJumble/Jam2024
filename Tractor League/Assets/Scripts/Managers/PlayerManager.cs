@@ -83,12 +83,8 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
 
     private Player ResolvePlayer(string uuid)
     {
-        Debug.Log("Current keys:" + string.Join(",", players.Keys));
-        Debug.Log("Resolving player: " + uuid);
-
         if (!players.TryGetValue(uuid, out Player player))
         {
-            Debug.Log("Player not found");
             player = CreatePlayer(uuid);
             players[uuid] = player;
         }
@@ -99,7 +95,6 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     {
         Debug.Log("[Create Player]");
         var player = Instantiate(playerPrefab).GetComponent<Player>();
-        Debug.Log("[Instantiated prefab]");
         RespawnPlayer(player);
         player.Init(this, uuid);
 
