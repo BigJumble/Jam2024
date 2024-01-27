@@ -93,12 +93,12 @@
 
         <form>
             <label>
-                <input type="radio" name="team" value="team1" onchange="selectTeam(1)" />
+                <input type="radio" id="t1" name="team" value="team1" onchange="selectTeam(1)" />
                 Team 1
             </label>
 
             <label>
-                <input type="radio" name="team" value="team2" onchange="selectTeam(2)" />
+                <input type="radio" id="t2" name="team" value="team2" onchange="selectTeam(2)" />
                 Team 2
             </label>
         </form>
@@ -125,6 +125,20 @@
     </div>
 
     <script>
+        window.onload = () =>{
+            let data = localStorage.getItem("data");
+            if(!data)
+            {
+                data = ["Test",1,1,"localhost"];
+            }
+            else{
+                data = JSON.parse(data);
+            }
+            document.getElementById("ip-input").value = data[3];
+            document.getElementById("name-input").value = data[0];
+            document.getElementById(`t${data[1]}`).checked = true;
+            selectImage(data[2]);
+        }
         const dat = new Date();
         let UUID = Date.now();
         let JoyX = 0,
@@ -218,22 +232,28 @@
         }
 
         //server stuff
-
+        let intervalId;
         function connectBro() {
+            localStorage.setItem("data", JSON.stringify([name,team,CharacterID,ip]));
             const socket = new WebSocket(`ws://${ip}:4649/Echo`);
 
             // setInterval(StreamUserInput, 50); // PUT THIS IN socket OPEN // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             socket.addEventListener("open", (event) => {
                 console.log("Connected to WebSocket server");
-                setInterval(StreamUserInput, 50);
+                intervalId = setInterval(StreamUserInput, 50);
             });
 
             function StreamUserInput() {
                 console.log(
                     `${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`
                 );
-                socket.send(`${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`);  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                try{
+                    socket.send(`${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`);  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                }
+                catch{
+                    console.log("Failed to send data!");
+                }
                 SoundID = 0;
             }
 
@@ -242,10 +262,11 @@
             });
             socket.addEventListener("close", (event) => {
                 console.log("Connection closed:", event);
-                clearInterval(StreamUserInput);
+                clearInterval(intervalId);
             });
             socket.addEventListener("error", (event) => {
                 console.error("WebSocket Error:", event);
+                clearInterval(intervalId);
             });
         }
     </script>
