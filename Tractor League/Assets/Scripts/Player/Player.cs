@@ -63,7 +63,7 @@ public class Player : MonoBehaviour
         yield return null;
     }
 
-    private void Start()
+    private void Awake()
     {
         vehicle = GetComponent<Vehicle>();       
         speech = GetComponentInChildren<SpeechBubble>();

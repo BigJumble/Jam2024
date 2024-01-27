@@ -1,0 +1,1504 @@
+fileFormatVersion: 2
+guid: f6156b52c6e8a4a33b028ced4eb491fc
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: karve_run_v2-01_0
+      rect:
+        serializedVersion: 2
+        x: 1980
+        y: 863
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d32b797a98df4c2da5ffd871061826e
+      internalID: -779396126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_1
+      rect:
+        serializedVersion: 2
+        x: 2546
+        y: 865
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce81be9af9f047febbc05606f3b39c7
+      internalID: 2040413295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_2
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 863
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b7724211a85439eb1bd1a18036e3fe
+      internalID: -1966249028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_3
+      rect:
+        serializedVersion: 2
+        x: 1467
+        y: 852
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee0d95d8347b14a7aa01f70a3b7139d1
+      internalID: 1292815372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_4
+      rect:
+        serializedVersion: 2
+        x: 1820
+        y: 29
+        width: 205
+        height: 825
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d88f84a9ddea441ea4a66909a0c52ba
+      internalID: -1693628675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_5
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 59
+        width: 215
+        height: 797
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ab8f075d1eb64fa1b37258da48e193c
+      internalID: 322759315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_6
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 72
+        width: 209
+        height: 782
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e760f277277bf45baac04280e3e7dcdb
+      internalID: 1460757736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_7
+      rect:
+        serializedVersion: 2
+        x: 3651
+        y: 852
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b1cf2081ae4d4af4b199f08c6cad51d
+      internalID: 712725880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_8
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 842
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801e3eb3287f8400a9e1b27771670cdf
+      internalID: 1026135567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_9
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 846
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb44c0fbe40d40099633ee3ceee5cee
+      internalID: -618130442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_10
+      rect:
+        serializedVersion: 2
+        x: 4175
+        y: 841
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69089f23c989c49b386bcb165c4950f4
+      internalID: 1121106560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_11
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 59
+        width: 239
+        height: 774
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b8239d50e31241998c3125dab69bb54
+      internalID: -475677792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_12
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 72
+        width: 228
+        height: 765
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787b95a9b1e5340b0ab1091e6c205e1a
+      internalID: 585255846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_13
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 59
+        width: 228
+        height: 787
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a343addeb0314d06bfc1e931e67a6d2
+      internalID: 783078281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_14
+      rect:
+        serializedVersion: 2
+        x: 2028
+        y: 801
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9b6553bc7ad249d5ab01280df8b55b8
+      internalID: 1998099079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_15
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 800
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6a723b4541e49cbb77ba9ea1ab3399
+      internalID: -245175400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_16
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 801
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589204ede51ad4a25b3173d637ff1be8
+      internalID: -857392867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_17
+      rect:
+        serializedVersion: 2
+        x: 3458
+        y: 29
+        width: 228
+        height: 817
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 889b52aba1f7a4319a6c0957501f2618
+      internalID: 545428482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_18
+      rect:
+        serializedVersion: 2
+        x: 3992
+        y: 72
+        width: 228
+        height: 760
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b66d8041f4846a5be4a2d641d22d37
+      internalID: -941153071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_19
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 780
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4a4cd875d9449a3b520a414925bd29
+      internalID: -929241735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_20
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 782
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a407e2f1c14d448982dbb7ec3a196e7
+      internalID: 1703857833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_21
+      rect:
+        serializedVersion: 2
+        x: 1507
+        y: 784
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b523314ad35824cd6a7e17012ad3288a
+      internalID: 756411854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_22
+      rect:
+        serializedVersion: 2
+        x: 3691
+        y: 784
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a34094d3deef464690e8278fbe08dce
+      internalID: 812717241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_23
+      rect:
+        serializedVersion: 2
+        x: 4223
+        y: 778
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c7d6c70ff94474a9b11591c377f057
+      internalID: -402067363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_24
+      rect:
+        serializedVersion: 2
+        x: 2362
+        y: 733
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a943a3135ce949f69f1419f9c01cdda
+      internalID: 1726167075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_25
+      rect:
+        serializedVersion: 2
+        x: 1804
+        y: 722
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b87f0e928430453ab08e2fdffbe1fe1
+      internalID: -1383204031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_26
+      rect:
+        serializedVersion: 2
+        x: 2896
+        y: 722
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e576e141a8a436281e4474f5e2ffe9
+      internalID: -568016566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_27
+      rect:
+        serializedVersion: 2
+        x: 1272
+        y: 663
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0efa1abf8e6e7456caead38fe2d1a044
+      internalID: 1990582362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_28
+      rect:
+        serializedVersion: 2
+        x: 2365
+        y: 661
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b68ac44f8d688499baa1383afcebf149
+      internalID: -915349585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_29
+      rect:
+        serializedVersion: 2
+        x: 3456
+        y: 663
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07335a1019a9b45d79210de736c129b2
+      internalID: -679505135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_30
+      rect:
+        serializedVersion: 2
+        x: 1810
+        y: 650
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42de41f405bf6440c811a96b1ecba06d
+      internalID: -1254337479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_31
+      rect:
+        serializedVersion: 2
+        x: 2902
+        y: 650
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 221ddfc721a2945ef8f02bf83bc9fb63
+      internalID: 1032256104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_32
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 511
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5acb85940ce7d4f5f9b97d6b2f6dae96
+      internalID: 1207276024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_33
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 498
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f4d8d634d5e4238b9cf0a0bb88db2c
+      internalID: -1622917071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_34
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 498
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc8cd2d2635b43a9a14525cc93b352a
+      internalID: 1353646550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_35
+      rect:
+        serializedVersion: 2
+        x: 3457
+        y: 498
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6409ec7345584920b5a5eb83ebbacbf
+      internalID: -599706300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_36
+      rect:
+        serializedVersion: 2
+        x: 3975
+        y: 498
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217af2f9c40f7429bb8c029f07e2fac8
+      internalID: 981740321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_37
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 488
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4b0ecbe49526479f86f47d0bf7b5f0b
+      internalID: -105085046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_38
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 454
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d82fefa54a84b6b9246d125f2d58e1
+      internalID: -323171709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_39
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 434
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 682c663e7ffe145b483721924251ce74
+      internalID: 239630537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_40
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 434
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22fc7ffb8bc5a4e35bf83fd25a9f4911
+      internalID: -2108288570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_41
+      rect:
+        serializedVersion: 2
+        x: 3428
+        y: 434
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab782758fc4194c8a8566d31a69109a9
+      internalID: -1612794467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_42
+      rect:
+        serializedVersion: 2
+        x: 3938
+        y: 434
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab8fcd1d7b2e14eddbf886bd6466ed5c
+      internalID: 302538570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_43
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 422
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a587661891cc947a098874b818cbfc8a
+      internalID: -2131147118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_44
+      rect:
+        serializedVersion: 2
+        x: 2338
+        y: 419
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54bbe9bc41f4044dc8b842620c503fbb
+      internalID: 1275308857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_45
+      rect:
+        serializedVersion: 2
+        x: 2884
+        y: 422
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5802eac0391e64edfb13726ea5327b1d
+      internalID: -1491753269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 413
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90b20a433acbd438da902b7bd94e89a3
+      internalID: 1089433674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_47
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 396
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b41a73e8709041ba9b039fc29c15682
+      internalID: -1272983667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_48
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 385
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1423e1252a4f341ab827ea626eed0d5f
+      internalID: -211222930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_49
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 385
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7bac442a171a44b5a2d3fcccb1ba2e1
+      internalID: 46522101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_50
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 385
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b159d9b763544041b7b8bdb94a4f043
+      internalID: -274677664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_51
+      rect:
+        serializedVersion: 2
+        x: 3923
+        y: 385
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eece6672380454c07b8c4cf707343f1c
+      internalID: -1348576738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_52
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 368
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03207f7b845340629f89e85131f1901
+      internalID: 2043577567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_53
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 368
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5f9c0915461499a8e9ed7292d9c804
+      internalID: 1392531711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_54
+      rect:
+        serializedVersion: 2
+        x: 1780
+        y: 371
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc695bd2fa064020b6dc266260af24d
+      internalID: -1936271677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_55
+      rect:
+        serializedVersion: 2
+        x: 2326
+        y: 366
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4878b790e8c774c688c4cc388eb26a73
+      internalID: -1444263206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_56
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 371
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8acec24581b944b8853c07d469d2b33
+      internalID: -1066293421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_57
+      rect:
+        serializedVersion: 2
+        x: 3428
+        y: 368
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf16ae617366040ab8132b09d7eeb8c3
+      internalID: -619125894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_58
+      rect:
+        serializedVersion: 2
+        x: 3938
+        y: 368
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fcf0815528424fb49f742c4f841213c
+      internalID: 1820016522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_59
+      rect:
+        serializedVersion: 2
+        x: 1791
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2545bfb24cfac45729d25dd03a8076e7
+      internalID: -793148393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_60
+      rect:
+        serializedVersion: 2
+        x: 2883
+        y: 353
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62063b6a36df44edf9d6bfca37185faa
+      internalID: -1878267187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: karve_run_v2-01_61
+      rect:
+        serializedVersion: 2
+        x: 2337
+        y: 347
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033d2bd4b3f6541d5b0c7077c4e69ff1
+      internalID: 180825086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      karve_run_v2-01_0: -779396126
+      karve_run_v2-01_1: 2040413295
+      karve_run_v2-01_10: 1121106560
+      karve_run_v2-01_11: -475677792
+      karve_run_v2-01_12: 585255846
+      karve_run_v2-01_13: 783078281
+      karve_run_v2-01_14: 1998099079
+      karve_run_v2-01_15: -245175400
+      karve_run_v2-01_16: -857392867
+      karve_run_v2-01_17: 545428482
+      karve_run_v2-01_18: -941153071
+      karve_run_v2-01_19: -929241735
+      karve_run_v2-01_2: -1966249028
+      karve_run_v2-01_20: 1703857833
+      karve_run_v2-01_21: 756411854
+      karve_run_v2-01_22: 812717241
+      karve_run_v2-01_23: -402067363
+      karve_run_v2-01_24: 1726167075
+      karve_run_v2-01_25: -1383204031
+      karve_run_v2-01_26: -568016566
+      karve_run_v2-01_27: 1990582362
+      karve_run_v2-01_28: -915349585
+      karve_run_v2-01_29: -679505135
+      karve_run_v2-01_3: 1292815372
+      karve_run_v2-01_30: -1254337479
+      karve_run_v2-01_31: 1032256104
+      karve_run_v2-01_32: 1207276024
+      karve_run_v2-01_33: -1622917071
+      karve_run_v2-01_34: 1353646550
+      karve_run_v2-01_35: -599706300
+      karve_run_v2-01_36: 981740321
+      karve_run_v2-01_37: -105085046
+      karve_run_v2-01_38: -323171709
+      karve_run_v2-01_39: 239630537
+      karve_run_v2-01_4: -1693628675
+      karve_run_v2-01_40: -2108288570
+      karve_run_v2-01_41: -1612794467
+      karve_run_v2-01_42: 302538570
+      karve_run_v2-01_43: -2131147118
+      karve_run_v2-01_44: 1275308857
+      karve_run_v2-01_45: -1491753269
+      karve_run_v2-01_46: 1089433674
+      karve_run_v2-01_47: -1272983667
+      karve_run_v2-01_48: -211222930
+      karve_run_v2-01_49: 46522101
+      karve_run_v2-01_5: 322759315
+      karve_run_v2-01_50: -274677664
+      karve_run_v2-01_51: -1348576738
+      karve_run_v2-01_52: 2043577567
+      karve_run_v2-01_53: 1392531711
+      karve_run_v2-01_54: -1936271677
+      karve_run_v2-01_55: -1444263206
+      karve_run_v2-01_56: -1066293421
+      karve_run_v2-01_57: -619125894
+      karve_run_v2-01_58: 1820016522
+      karve_run_v2-01_59: -793148393
+      karve_run_v2-01_6: 1460757736
+      karve_run_v2-01_60: -1878267187
+      karve_run_v2-01_61: 180825086
+      karve_run_v2-01_7: 712725880
+      karve_run_v2-01_8: 1026135567
+      karve_run_v2-01_9: -618130442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
