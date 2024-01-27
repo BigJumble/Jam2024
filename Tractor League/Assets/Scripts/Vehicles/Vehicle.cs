@@ -63,7 +63,7 @@ public class Vehicle : Entity
         // Update tire animations
         foreach(var tireAnimator in tireAnimators)
         {
-            tireAnimator.SetBool("Rolling", rb.velocity.magnitude > 0f);
+            tireAnimator.SetBool("Rolling", rb.velocity.magnitude > 1.1f);
             tireAnimator.SetFloat("Speed", transform.InverseTransformDirection(rb.velocity).y / 3f);   
         }
     }
