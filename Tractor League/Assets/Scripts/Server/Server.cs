@@ -111,6 +111,8 @@ public class Server : MonoBehaviour, MessageReceiver
 
     private void logA()
     {
+        //GameObject objToSpawn = new GameObject("Cool GameObject made from Code");
+        //var a = Instantiate(objToSpawn,objToSpawn.transform);
         foreach (var entry in PlayersInput)
         {
             Debug.Log(entry.Key + " | " + entry.Value.PlayerName + " | " + entry.Value.JoystickX + " | " + entry.Value.JoystickY + " | " + entry.Value.SoundEffectID);
