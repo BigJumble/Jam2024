@@ -1,6 +1,5 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -21,6 +20,7 @@ public class Player : MonoBehaviour
     private PlayerManager pm;
 
     private Vehicle vehicle;
+    private SpeechBubble speech;
 
     private DateTime lastTouch;
 
@@ -66,5 +66,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         vehicle = GetComponent<Vehicle>();       
+        speech = GetComponentInChildren<SpeechBubble>();
+    }
+
+    private void Update()
+    {
+        if(UnityEngine.Input.GetKeyDown(KeyCode.Space))
+        {
+            speech.TalkForSeconds(4f);
+        }
     }
 }
