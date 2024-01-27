@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
         public float joystickY;
         public int characterID;
         public int soundEffectID;
+        public DateTime received;
     }
 
     public string uuid;
@@ -22,7 +23,7 @@ public class Player : MonoBehaviour
     private Vehicle vehicle;
     private SpeechBubble speech;
 
-    private DateTime lastTouch;
+    private DateTime lastUpdate;
 
     public void SetPosition(Transform transform)
     {
@@ -42,9 +43,9 @@ public class Player : MonoBehaviour
         StartCoroutine(DeathCounter());
     }
 
-    public void Touch(float x, float y)
+    public void Touch(float x, float y, DateTime lastUpdate)
     {
-        lastTouch = DateTime.Now;
+        this.lastUpdate = lastUpdate;
         vehicle.SetInput(x, y);
     }
 
@@ -53,7 +54,7 @@ public class Player : MonoBehaviour
         while(true)
         {
             yield return new WaitForSeconds(5f);
-            if ((DateTime.UtcNow - lastTouch).TotalSeconds > 5) break;
+            if ((DateTime.UtcNow - lastUpdate).TotalSeconds > 5) break;
         }
 
         Debug.Log("[NotifyOfDeath]");

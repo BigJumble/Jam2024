@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,9 +46,9 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         InvokeRepeating("UpdateState", 0, 0.05f);
     }
 
-    public void HandleMessage(Player.Input msg)
+    public void HandleMessage(Player.Input input)
     {
-        state.AddOrUpdate(msg.uuid, msg, (oldKey, oldValue) => msg);
+        state.AddOrUpdate(input.uuid, input, (oldKey, oldValue) => input);
     }
 
     private void UpdateState()
@@ -56,7 +57,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         {
             Player p = ResolvePlayer(uuid);
             SetTeam(p, (Team)input.team);
-            p.Touch(input.joystickX, input.joystickY);
+            p.Touch(input.joystickX, input.joystickY, input.received);
         }
     }
 
@@ -179,6 +180,8 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
             playerInput.joystickY = float.Parse(dataParts[4]);
             playerInput.characterID = int.Parse(dataParts[5]);
             playerInput.soundEffectID = int.Parse(dataParts[6]);
+            playerInput.received = DateTime.UtcNow;
+
 
             HandleMessage(playerInput);
         }
