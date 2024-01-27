@@ -40,9 +40,12 @@ public class MessageQueue
 {
     private static MessageQueue _instance;
 
-    private static List<Server> servers;
+    private List<Server> servers;
 
-    private MessageQueue() { }
+    private MessageQueue()
+    {
+        servers = new List<Server>();
+    }
 
     public static MessageQueue Instance
     {
@@ -51,7 +54,6 @@ public class MessageQueue
             if (_instance == null)
             {
                 _instance = new MessageQueue();
-
             }
             return _instance;
         }
@@ -59,7 +61,7 @@ public class MessageQueue
 
     public static void OnMessage(MessageEventArgs e)
     {
-        foreach (var server in servers)
+        foreach (var server in Instance.servers)
         {
             server.OnMessage(e);
         }
@@ -67,9 +69,10 @@ public class MessageQueue
 
     public static void Subscribe(Server server)
     {
-        servers.Add(server);
+        Instance.servers.Add(server);
     }
 }
+
 
 
 public class Server : MonoBehaviour
@@ -88,7 +91,7 @@ public class Server : MonoBehaviour
     {
         wssv = new WebSocketServer(4649);
 
-        wssv.AddWebSocketService<MessageHandler>("/HandleInput");
+        wssv.AddWebSocketService<MessageHandler>("/Echo");
         wssv.Start();
         if (wssv.IsListening)
         {
