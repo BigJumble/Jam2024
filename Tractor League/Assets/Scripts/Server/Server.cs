@@ -9,16 +9,18 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public struct PlayerInput
 {
+    public string ID;
     public string PlayerName;
-    public string Team;
+    public int Team;
     public float JoystickX;
     public float JoystickY;
     public int CharacterID;
     public int SoundEffectID;
 
     // Constructor for convenience
-    public PlayerInput(string playerName, string team, float joystickX, float joystickY, int characterID, int soundEffectID)
+    public PlayerInput(string iD, string playerName, int team, float joystickX, float joystickY, int characterID, int soundEffectID)
     {
+        ID = iD;
         PlayerName = playerName;
         Team = team;
         JoystickX = joystickX;
@@ -100,15 +102,14 @@ public class Server : MonoBehaviour
             foreach (var path in wssv.WebSocketServices.Paths)
                 Debug.Log("- " + path);
         }
-        InvokeRepeating("logA", 0, 1);
+        InvokeRepeating("logA", 0, 0.05f);
     }
 
     private void logA()
     {
-        Debug.Log(".");
         foreach (var entry in PlayersInput)
         {
-            Debug.Log(entry.Key + ": " + entry.Value);
+            Debug.Log(entry.Key + " | " + entry.Value.PlayerName + " | " + entry.Value.JoystickX + " | " + entry.Value.JoystickY + " | " + entry.Value.SoundEffectID);
         }
     }
 
@@ -123,9 +124,9 @@ public class Server : MonoBehaviour
 
     public void OnMessage(MessageEventArgs e)
     {
-        Debug.Log("Received: " + e.Data);
+        //Debug.Log("Received: " + e.Data);
 
-        Debug.Log(e.Data); // gets data
+        //Debug.Log(e.Data); // gets data
                            // data is
                            // "PlayerName|Team|joystick X|joystick Y|CharacterID|SoundEffectID"
 
@@ -133,20 +134,20 @@ public class Server : MonoBehaviour
 
         if (dataParts.Length == 6)
         {
-            string playerName = dataParts[0];
 
             PlayerInput playerInput = new PlayerInput(
-                playerName,
-                dataParts[1], // Team
-                float.Parse(dataParts[2]), // Joystick X
-                float.Parse(dataParts[3]), // Joystick Y
-                int.Parse(dataParts[4]), // CharacterID
-                int.Parse(dataParts[5]) // SoundEffectID
+                dataParts[0], // UUID
+                dataParts[1], // Name
+                int.Parse(dataParts[2])-1, // Team
+                float.Parse(dataParts[3]), // Joystick X
+                float.Parse(dataParts[4]), // Joystick Y
+                int.Parse(dataParts[5]), // CharacterID
+                int.Parse(dataParts[6]) // SoundEffectID
             );
 
-            PlayersInput[playerName] = playerInput;
+            PlayersInput[dataParts[0]] = playerInput;
 
-            Debug.Log("Stored input for player " + playerName + ": " + playerInput);
+            Debug.Log("Stored input for player " + dataParts[0] + ": " + playerInput);
         }
         else
         {
