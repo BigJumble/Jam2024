@@ -42,11 +42,11 @@ public class MessageQueue
 {
     private static MessageQueue _instance;
 
-    private List<Server> servers;
+    private List<MessageReceiver> receivers;
 
     private MessageQueue()
     {
-        servers = new List<Server>();
+        receivers = new List<MessageReceiver>();
     }
 
     public static MessageQueue Instance
@@ -63,21 +63,25 @@ public class MessageQueue
 
     public static void OnMessage(MessageEventArgs e)
     {
-        foreach (var server in Instance.servers)
+        foreach (var receiver in Instance.receivers)
         {
-            server.OnMessage(e);
+            receiver.OnMessage(e);
         }
     }
 
-    public static void Subscribe(Server server)
+    public static void Subscribe(MessageReceiver messageReceiver)
     {
-        Instance.servers.Add(server);
+        Instance.receivers.Add(messageReceiver);
     }
 }
 
+public interface MessageReceiver
+{
+    public void OnMessage(MessageEventArgs e);
+}
 
 
-public class Server : MonoBehaviour
+public class Server : MonoBehaviour, MessageReceiver
 {
     public Dictionary<string, PlayerInput> PlayersInput;
 
@@ -86,7 +90,7 @@ public class Server : MonoBehaviour
     private void Awake()
     {
         PlayersInput = new Dictionary<string, PlayerInput>();
-        MessageQueue.Subscribe(this);
+        //MessageQueue.Subscribe(this);
     }
 
     private void Start()
@@ -124,17 +128,16 @@ public class Server : MonoBehaviour
 
     public void OnMessage(MessageEventArgs e)
     {
-        //Debug.Log("Received: " + e.Data);
+        Debug.Log("Received: " + e.Data);
 
         //Debug.Log(e.Data); // gets data
-                           // data is
-                           // "PlayerName|Team|joystick X|joystick Y|CharacterID|SoundEffectID"
+        // data is
+        // "PlayerName|Team|joystick X|joystick Y|CharacterID|SoundEffectID"
 
         string[] dataParts = e.Data.Split('|');
 
-        if (dataParts.Length == 6)
+        if (dataParts.Length == 7)
         {
-
             PlayerInput playerInput = new PlayerInput(
                 dataParts[0], // UUID
                 dataParts[1], // Name

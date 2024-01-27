@@ -11,6 +11,8 @@ public class Vehicle : Entity
     private float wheelAngle = 0f;
     private Rigidbody2D rb;
 
+    private float xValue, yValue;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -19,7 +21,7 @@ public class Vehicle : Entity
     private void Update()
     {
         // Get input
-        float xValue = Input.GetAxis("Horizontal");
+        //float xValue = Input.GetAxis("Horizontal");
 
         // Calculate target wheel angle
         float targetWheelAngle = maxSteerAngle * xValue;
@@ -34,17 +36,20 @@ public class Vehicle : Entity
 
     private void FixedUpdate()
     {
+        // Get input
+        //float yValue = Input.GetAxis("Vertical");
+
         rb.angularDrag = Input.GetKey(KeyCode.Space) ? 1.5f : 4f;
 
         // Calculate forward movement
-        float moveAmount = Input.GetAxis("Vertical") * moveSpeed * Time.fixedDeltaTime;
+        float moveAmount = yValue * moveSpeed * Time.fixedDeltaTime;
         rb.AddForce(transform.up * moveAmount);
 
         // Apply rotation based on wheel angle
         float turnAmount = wheelAngle / maxSteerAngle * moveSpeed * Time.fixedDeltaTime;
 
-        if(Mathf.Abs(Input.GetAxis("Vertical")) > 0)
-            rb.AddTorque(turnAmount * Mathf.Sign(Input.GetAxis("Vertical")));
+        if(Mathf.Abs(yValue) > 0)
+            rb.AddTorque(turnAmount * Mathf.Sign(yValue));
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -68,5 +73,12 @@ public class Vehicle : Entity
 
         // Apply the push force to the collided object
         collision.rigidbody.AddForce(collisionDirection * pushForce, ForceMode2D.Impulse);
+    }
+
+    public void SetInput(float x, float y)
+    {
+        Debug.Log($"SETTING INPUT IN VEHICLE {x} {y}");
+        xValue = x;
+        yValue = y;
     }
 }
