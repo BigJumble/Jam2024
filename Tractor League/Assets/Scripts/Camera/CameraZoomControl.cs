@@ -14,6 +14,7 @@ public class CameraZoomControl : MonoBehaviour
     private void Start()
     {
         cam = GetComponent<Camera>();
+        target = FindObjectOfType<Vehicle>().GetComponent<Rigidbody2D>();
     }
 
     private void Update()
