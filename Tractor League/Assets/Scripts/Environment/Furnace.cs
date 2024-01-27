@@ -1,7 +1,11 @@
 using UnityEngine;
+using System;
 
 public class Furnace : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerManager.Team team;
+
     private void OnTriggerEnter2D(Collider2D collider)
     {
         Debug.Log("entered " + collider.name);
@@ -14,5 +18,9 @@ public class Furnace : MonoBehaviour
         collider.transform.SetPositionAndRotation(
             new Vector3(0, 0, 0), Quaternion.identity
         );
+
+        OnGoal?.Invoke(team);
     }
+
+    public event Action<PlayerManager.Team> OnGoal;
 }
