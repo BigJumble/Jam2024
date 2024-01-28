@@ -79,10 +79,46 @@
             width: 50px;
             height: 50px;
         }
+
+
+
+
+        #container {
+            position: absolute;
+            top:50px;
+            left:calc(50% - 100px);
+            align-items: center;
+            justify-content: center;
+            max-height: 220px;
+            height: 220px;
+            overflow: hidden;
+        }
+
+        #container img {
+            max-width: 100px;
+            height: auto;
+        }
+
+
+        #container button {
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            transform: translateY(-120px);
+        }
+
+        h1{
+            font-size: 50px;
+            text-align: center;
+            display: none;
+        }
     </style>
 </head>
 
 <body>
+    <h1 id="title">Tracktor League!!!</h1>
     <div id="userinput">
         <label for="ip-input">IP Address:</label>
         <input type="text" id="ip-input" placeholder="Enter IP address" value="localhost"
@@ -106,13 +142,20 @@
         <button onclick="connectBro()">Connect</button>
     </div>
 
-    <div class="image-container">
+    <div id="container">
+        <button onclick="handleLeftButtonClick()">Left</button>
+        <img id="charImg" src="image1.png" alt="Centered Image">
+        <button onclick="handleRightButtonClick()">Right</button>
+    </div>
+
+
+    <!-- <div class="image-container">
         <img src="image1.png" id="img-1" alt="Image 1" onclick="selectImage(1)" />
         <img src="image2.png" id="img-2" alt="Image 2" onclick="selectImage(2)" />
         <img src="image3.png" id="img-3" alt="Image 3" onclick="selectImage(3)" />
         <img src="image4.png" id="img-4" alt="Image 4" onclick="selectImage(4)" />
         <img src="image5.png" id="img-5" alt="Image 5" onclick="selectImage(5)" />
-    </div>
+    </div> -->
 
     <div class="button-container">
         <button onclick="selectSound(1)">Say 1</button>
@@ -135,9 +178,14 @@
                 data = JSON.parse(data);
             }
             document.getElementById("ip-input").value = data[3];
+            ip = data[3];
             document.getElementById("name-input").value = data[0];
+            name = data[0];
             document.getElementById(`t${data[1]}`).checked = true;
-            selectImage(data[2]);
+            team = data[1];
+            CharacterID = data[2];
+            const charImg = document.getElementById("charImg");
+            charImg.src = `image${data[2]+1}.png`;
         }
         const dat = new Date();
         let UUID = Date.now();
@@ -197,15 +245,17 @@
         // Character selection:
         let selectedImage = null;
         CharacterID = 0;
-        function selectImage(imageNumber) {
-            if (selectedImage !== null)
-                document
-                    .getElementById(`img-${selectedImage}`)
-                    .classList.remove("selected");
 
-            document.getElementById(`img-${imageNumber}`).classList.add("selected");
-            selectedImage = imageNumber;
-            CharacterID = imageNumber;
+        function handleLeftButtonClick() {
+            CharacterID = (CharacterID + 4)%5;
+            const charImg = document.getElementById("charImg");
+            charImg.src = `image${CharacterID+1}.png`;
+        }
+
+        function handleRightButtonClick() {
+            CharacterID = (CharacterID + 1)%5;
+            const charImg = document.getElementById("charImg");
+            charImg.src = `image${CharacterID+1}.png`;
         }
 
         //Team change
@@ -234,6 +284,15 @@
         //server stuff
         let intervalId;
         function connectBro() {
+
+            let aaa = document.getElementById("userinput");
+            let aaa2 = document.getElementById("container");
+            aaa.parentNode.removeChild(aaa);
+            aaa2.parentNode.removeChild(aaa2);
+
+            let t = document.getElementById("title");
+            t.style.display = "block";
+
             localStorage.setItem("data", JSON.stringify([name,team,CharacterID,ip]));
             const socket = new WebSocket(`ws://${ip}:4649/Echo`);
 
@@ -246,10 +305,10 @@
 
             function StreamUserInput() {
                 console.log(
-                    `${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`
+                    `${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID+1}|${SoundID}`
                 );
                 try{
-                    socket.send(`${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID}|${SoundID}`);  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                    socket.send(`${UUID}|${name}|${team}|${JoyX}|${JoyY}|${CharacterID+1}|${SoundID}`);  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 }
                 catch{
                     console.log("Failed to send data!");
