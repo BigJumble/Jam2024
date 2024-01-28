@@ -9,6 +9,8 @@ public class CameraZoomControl : MonoBehaviour
     public float smoothTime = 0.5f;
     private float targetSize;
     private float velocity;
+    [SerializeField]
+    private float factor = 2f;
     private Transform cow;
 
     void Start()
@@ -24,19 +26,22 @@ public class CameraZoomControl : MonoBehaviour
         targets.Add(cow);
     }
 
+    float maxDistance;
+    float distance;
     private void Update()
     {
         if (targets.Count == 0) return;
 
-        Bounds bounds = new Bounds(targets[0].position, Vector3.zero);
+        maxDistance = 0;
         foreach (Transform target in targets)
         {
-            bounds.Encapsulate(target.position);
+            distance = target.position.magnitude;
+            if (distance > maxDistance)
+                maxDistance = distance;
         }
 
-        float maxDistance = Mathf.Max(bounds.size.x, bounds.size.y);
-        targetSize = 10 + (maxDistance / 2.0f);
+        targetSize = maxDistance * factor;
 
-        camera.orthographicSize = Mathf.SmoothDamp(camera.orthographicSize, targetSize, ref velocity, smoothTime);
+        camera.orthographicSize = Mathf.SmoothDamp(camera.orthographicSize, Mathf.Clamp(targetSize, 30f, 33f), ref velocity, smoothTime);
     }
 }
