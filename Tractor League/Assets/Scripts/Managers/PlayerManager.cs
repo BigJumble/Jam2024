@@ -19,7 +19,8 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         Savickas,
         Bielka,
         Nauseda,
-        Audrele
+        Audrele,
+        Grazulis
     }
 
     [SerializeField]
