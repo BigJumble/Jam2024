@@ -418,6 +418,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Bulldozer Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5641026996899375623, guid: 2b0cc12e5ea1f4f06aa09a9a8a0d0787, type: 3}
+      propertyPath: moveSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5641026996899375623, guid: 2b0cc12e5ea1f4f06aa09a9a8a0d0787, type: 3}
+      propertyPath: turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 6860318854447035079, guid: 2b0cc12e5ea1f4f06aa09a9a8a0d0787, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.1

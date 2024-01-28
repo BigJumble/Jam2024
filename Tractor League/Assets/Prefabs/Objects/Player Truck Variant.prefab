@@ -446,6 +446,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Truck Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2227206341775711056, guid: 8c7d75f831b344cf4a5be00c93c609e0, type: 3}
+      propertyPath: moveSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2227206341775711056, guid: 8c7d75f831b344cf4a5be00c93c609e0, type: 3}
+      propertyPath: turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

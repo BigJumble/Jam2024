@@ -615,6 +615,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3519783116214343372}
     - target: {fileID: 6829234505533921244, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: moveSpeed
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829234505533921244, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6829234505533921244, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
       propertyPath: tireAnimators.Array.size
       value: 5
       objectReference: {fileID: 0}
