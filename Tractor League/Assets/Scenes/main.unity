@@ -2115,10 +2115,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4463286882578097690, guid: 2970bc7f189b740baa24abcb847a99da, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e6f107c485784514380f1645f2878cd5, type: 2}
     - target: {fileID: 7992688264895836687, guid: 2970bc7f189b740baa24abcb847a99da, type: 3}
       propertyPath: m_Name
       value: Cow
       objectReference: {fileID: 0}
+    - target: {fileID: 8491996492237271809, guid: 2970bc7f189b740baa24abcb847a99da, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: e6f107c485784514380f1645f2878cd5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
