@@ -2373,9 +2373,9 @@ MonoBehaviour:
   uuid: 
   team: 0
   soundEffects:
-  - {fileID: 8300000, guid: 5f11fb3d68fb54687a4e9f189eff9529, type: 3}
-  - {fileID: 8300000, guid: 563890e4990fd4a54b590d01e9907446, type: 3}
-  - {fileID: 8300000, guid: f819b5358acd047d9ab749099ad80e91, type: 3}
+  - {fileID: 8300000, guid: 1f194d92d85ad6b43a1cfb93d4535387, type: 3}
+  - {fileID: 8300000, guid: 9720a7bc1fbe9024d84641501ac0bc18, type: 3}
+  - {fileID: 8300000, guid: bf8a3286d80199444bc51da73faf13b1, type: 3}
   audioSource: {fileID: 5869651905156381939}
 --- !u!4 &4640515009333216177 stripped
 Transform:

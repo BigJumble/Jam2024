@@ -488,9 +488,9 @@ MonoBehaviour:
   uuid: 
   team: 0
   soundEffects:
-  - {fileID: 8300000, guid: 5f11fb3d68fb54687a4e9f189eff9529, type: 3}
-  - {fileID: 8300000, guid: 563890e4990fd4a54b590d01e9907446, type: 3}
-  - {fileID: 8300000, guid: f819b5358acd047d9ab749099ad80e91, type: 3}
+  - {fileID: 8300000, guid: f01ec0e4a0f7b2845aa39d1b0b82a86e, type: 3}
+  - {fileID: 8300000, guid: f14b78b788655be4fa9e961f45d7c3c0, type: 3}
+  - {fileID: 8300000, guid: 61fefcc46254adb45a5e7181611358eb, type: 3}
   audioSource: {fileID: 4901195151702373987}
 --- !u!4 &3202177879635404736 stripped
 Transform:
