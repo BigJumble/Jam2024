@@ -27,6 +27,14 @@ public class Cow : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if(Mathf.Abs(transform.position.x) > 60 || Mathf.Abs(transform.position.y) > 60)
+        {
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
+            transform.position = Vector3.zero;
+        }
+
+
         rolling = Mathf.Abs(rb.angularVelocity) > spinAngularVelocityThreshold ||
             rb.velocity.magnitude > spinVelocityMagnitudeThreshold;
 

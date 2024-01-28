@@ -68,7 +68,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     {
         foreach(var (uuid, input) in state)
         {
-            Player p = ResolvePlayer(uuid, (Character)input.characterID);
+            Player p = ResolvePlayer(uuid, (Character)input.characterID, (Team)input.team);
             SetTeam(p, (Team)input.team);
             p.Touch(input.joystickX, input.joystickY, input.received, input.soundEffectID);
         }
@@ -97,21 +97,22 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         OnUpdatePlayers?.Invoke(players.Values.ToList());
     }
 
-    private Player ResolvePlayer(string uuid, Character character)
+    private Player ResolvePlayer(string uuid, Character character, Team team)
     {
         if (!players.TryGetValue(uuid, out Player player))
         {
-            player = CreatePlayer(uuid, character);
+            player = CreatePlayer(uuid, character, team);
             players[uuid] = player;
             OnUpdatePlayers?.Invoke(players.Values.ToList());
         }
         return player;
     }
 
-    private Player CreatePlayer(string uuid, Character character)
+    private Player CreatePlayer(string uuid, Character character, Team team)
     {
         Debug.Log("[Create Player]");
         var player = Instantiate(playerPrefabs[(int)character]).GetComponent<Player>();
+
         SlapSound.time = 0.8f;
         SlapSound.Play();
 
@@ -119,6 +120,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         Invoke("ResetFunction", 3f);
 
 
+        player.team = team;
         RespawnPlayer(player);
         player.Init(this, uuid);
 
