@@ -594,6 +594,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Tractor Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 4188046250413861972, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4188046250413861972, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280825663746935913, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 4280825663746935913, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.19
+      objectReference: {fileID: 0}
     - target: {fileID: 6829234505533921244, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
       propertyPath: frontChar
       value: 
@@ -606,6 +622,14 @@ PrefabInstance:
       propertyPath: tireAnimators.Array.data[4]
       value: 
       objectReference: {fileID: 8733757642798369361}
+    - target: {fileID: 7391779912603442890, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 7391779912603442890, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.19
+      objectReference: {fileID: 0}
     - target: {fileID: 7721353394164435567, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -645,6 +669,14 @@ PrefabInstance:
     - target: {fileID: 7721353394164435567, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851565122687653487, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.x
+      value: 0.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 8851565122687653487, guid: 4a9e3efdd680c4ed5a9ac17d77d83ee6, type: 3}
+      propertyPath: m_Size.y
+      value: 1.19
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
