@@ -29,7 +29,7 @@ public class Vehicle : Entity
     private void Update()
     {
         // Get input
-        xValue = Input.GetAxis("Horizontal");
+        //xValue = Input.GetAxis("Horizontal");
 
         // Calculate target wheel angle
         float targetWheelAngle = maxSteerAngle * xValue * wheelDirection;
@@ -47,7 +47,7 @@ public class Vehicle : Entity
     private void FixedUpdate()
     {
         // Get input
-        yValue = Input.GetAxis("Vertical");
+        //yValue = Input.GetAxis("Vertical");
 
         rb.angularDrag = Input.GetKey(KeyCode.Space) ? 1.5f : 4f;
 
