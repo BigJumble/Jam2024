@@ -1,10 +1,20 @@
 using UnityEngine;
 using System;
 
+[RequireComponent(typeof(AudioSource))]
 public class Furnace : MonoBehaviour
 {
+    private AudioSource audioSource;
+
     [SerializeField]
     private PlayerManager.Team team;
+
+    public AudioClip explodeCow;
+
+    private void Start()
+    {
+        this.audioSource = GetComponent<AudioSource>();
+    }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
@@ -18,6 +28,9 @@ public class Furnace : MonoBehaviour
         collider.transform.SetPositionAndRotation(
             new Vector3(0, 0, 0), Quaternion.identity
         );
+
+        if(!audioSource.isPlaying)
+            audioSource.PlayOneShot(explodeCow);
 
         OnGoal?.Invoke(team);
     }
