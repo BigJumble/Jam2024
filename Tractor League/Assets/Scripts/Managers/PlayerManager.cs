@@ -37,6 +37,9 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     private List<Player> teamAPlayers;
     private List<Player> teamBPlayers;
 
+    [SerializeField]
+    GameObject[] splashes;
+
     ConcurrentDictionary<string, Player.Input> state = new ConcurrentDictionary<string, Player.Input>();
 
     public event Action<List<Player>> OnUpdatePlayers;
@@ -106,10 +109,19 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     {
         Debug.Log("[Create Player]");
         var player = Instantiate(playerPrefabs[(int)character]).GetComponent<Player>();
+        splashes[(int)character].SetActive(true);
+        Invoke("ResetFunction", 3f);
         RespawnPlayer(player);
         player.Init(this, uuid);
 
         return player;
+    }
+    private void ResetFunction()
+    {
+        foreach (GameObject a in splashes)
+        {
+            a.SetActive(false);
+        }
     }
 
     private void SetTeam(Player player, Team team)
