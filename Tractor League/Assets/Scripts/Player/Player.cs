@@ -55,7 +55,11 @@ public class Player : MonoBehaviour
         this.lastUpdate = lastUpdate;
         vehicle.SetInput(x, y);
         if (soundEffectId > 0 && soundEffectId <= soundEffects.Count && !audioSource.isPlaying)
-            audioSource.PlayOneShot(soundEffects[soundEffectId - 1]);
+        {
+            var clip = soundEffects[soundEffectId - 1];
+            audioSource.PlayOneShot(clip);
+            speech.TalkForSeconds(clip.length);
+        }
     }
 
     private IEnumerator DeathCounter()
@@ -77,13 +81,5 @@ public class Player : MonoBehaviour
     {
         vehicle = GetComponent<Vehicle>();       
         speech = GetComponentInChildren<SpeechBubble>();
-    }
-
-    private void Update()
-    {
-        if(UnityEngine.Input.GetKeyDown(KeyCode.Space))
-        {
-            speech.TalkForSeconds(4f);
-        }
     }
 }
