@@ -895,7 +895,7 @@ MonoBehaviour:
   uuid: 
   team: 0
   soundEffects:
-  - {fileID: 8300000, guid: 5f11fb3d68fb54687a4e9f189eff9529, type: 3}
-  - {fileID: 8300000, guid: 563890e4990fd4a54b590d01e9907446, type: 3}
-  - {fileID: 8300000, guid: f819b5358acd047d9ab749099ad80e91, type: 3}
+  - {fileID: 8300000, guid: 8646636e0d2b5443f82cb3007403c280, type: 3}
+  - {fileID: 8300000, guid: a9ad6e1962c714353a151eb4b487bedf, type: 3}
+  - {fileID: 8300000, guid: 8267845fdf23b438a9219dcd5004b1cf, type: 3}
   audioSource: {fileID: 6184375734742627499}
