@@ -514,7 +514,7 @@ MonoBehaviour:
   uuid: 
   team: 0
   soundEffects:
-  - {fileID: 8300000, guid: 5f11fb3d68fb54687a4e9f189eff9529, type: 3}
-  - {fileID: 8300000, guid: 563890e4990fd4a54b590d01e9907446, type: 3}
-  - {fileID: 8300000, guid: f819b5358acd047d9ab749099ad80e91, type: 3}
+  - {fileID: 8300000, guid: c5805b504c0eb4c51a9d857d9affc1bc, type: 3}
+  - {fileID: 8300000, guid: b5a06a2f3340a4424ab97baba93f77d4, type: 3}
+  - {fileID: 8300000, guid: cb1f66f64ed284fed818dea650248efa, type: 3}
   audioSource: {fileID: 8819950013663005324}
