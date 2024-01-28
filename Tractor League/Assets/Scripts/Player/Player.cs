@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -23,6 +24,12 @@ public class Player : MonoBehaviour
     private Vehicle vehicle;
     private SpeechBubble speech;
 
+    [SerializeField]
+    private List<AudioClip> soundEffects;
+
+    [SerializeField]
+    private AudioSource audioSource;
+
     private DateTime lastUpdate;
 
     public void SetPosition(Transform transform)
@@ -43,10 +50,12 @@ public class Player : MonoBehaviour
         StartCoroutine(DeathCounter());
     }
 
-    public void Touch(float x, float y, DateTime lastUpdate)
+    public void Touch(float x, float y, DateTime lastUpdate, int soundEffectId)
     {
         this.lastUpdate = lastUpdate;
         vehicle.SetInput(x, y);
+        if (soundEffectId > 0 && soundEffectId <= soundEffects.Count && !audioSource.isPlaying)
+            audioSource.PlayOneShot(soundEffects[soundEffectId - 1]);
     }
 
     private IEnumerator DeathCounter()

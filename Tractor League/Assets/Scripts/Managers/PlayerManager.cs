@@ -65,7 +65,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         {
             Player p = ResolvePlayer(uuid, (Character)input.characterID);
             SetTeam(p, (Team)input.team);
-            p.Touch(input.joystickX, input.joystickY, input.received);
+            p.Touch(input.joystickX, input.joystickY, input.received, input.soundEffectID);
         }
     }
 
