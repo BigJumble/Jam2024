@@ -29,7 +29,9 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
     [SerializeField]
     private Dictionary<string, Player> players;
 
+    [SerializeField]
     private List<Transform> teamASpawnLocations;
+    [SerializeField]
     private List<Transform> teamBSpawnLocations;
 
     private List<Player> teamAPlayers;
@@ -37,14 +39,10 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
 
     ConcurrentDictionary<string, Player.Input> state = new ConcurrentDictionary<string, Player.Input>();
 
+    public event Action<List<Player>> OnUpdatePlayers;
+
     private void Start()
     {
-        teamASpawnLocations = GameObject.Find("Team A Spawn Points")
-            .transform.GetComponentsInChildren<Transform>().ToList();
-
-        teamBSpawnLocations = GameObject.Find("Team B Spawn Points")
-            .transform.GetComponentsInChildren<Transform>().ToList();
-
         teamAPlayers = new List<Player>();
         teamBPlayers = new List<Player>();
 
@@ -89,6 +87,8 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         players.Remove(player.uuid);
         state.TryRemove(player.uuid, out Player.Input _);
         Destroy(player.gameObject);
+
+        OnUpdatePlayers?.Invoke(players.Values.ToList());
     }
 
     private Player ResolvePlayer(string uuid, Character character)
@@ -97,6 +97,7 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
         {
             player = CreatePlayer(uuid, character);
             players[uuid] = player;
+            OnUpdatePlayers?.Invoke(players.Values.ToList());
         }
         return player;
     }
@@ -151,8 +152,11 @@ public class PlayerManager : MonoBehaviour, MessageReceiver
                 return;
         }
 
-        player.SetPosition(SelectEmptySpawnLocation(locations));
+
+        var location = SelectEmptySpawnLocation(locations);
+        player.SetPosition(location);
         Debug.Log("[Set Position]");
+        Debug.Log(location);
     }
 
     private Transform SelectEmptySpawnLocation(List<Transform> locations)

@@ -1,31 +1,42 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 public class CameraZoomControl : MonoBehaviour
 {
-    public Rigidbody2D target; // The target object (e.g., your vehicle)
-    public float minZoom = 5f; // Minimum zoom level
-    public float maxZoom = 10f; // Maximum zoom level
-    public float zoomSensitivity = 0.5f; // Sensitivity of zoom relative to velocity
-    public float lerpRate = 5f; // Rate at which camera zooms in/out
+    public List<Transform> targets;
+    private Camera camera;
+    public float smoothTime = 0.5f;
+    private float targetSize;
+    private float velocity;
+    private Transform cow;
 
-    private Camera cam;
-
-    private void Start()
+    void Start()
     {
-        cam = GetComponent<Camera>();
-        target = FindObjectOfType<Vehicle>()?.GetComponent<Rigidbody2D>();
+        cow = GameObject.FindGameObjectWithTag("Ball")?.transform;
+        camera = GetComponent<Camera>();
+        FindObjectOfType<PlayerManager>().OnUpdatePlayers += UpdateTargets;
+    }
+
+    public void UpdateTargets(List<Player> players)
+    {
+        targets = players.ConvertAll((x) => x.transform);
+        targets.Add(cow);
     }
 
     private void Update()
     {
-        if (target != null)
-        {
-            // Calculate zoom factor based on velocity in local Y axis
-            float zoomFactor = Mathf.Clamp(target.velocity.magnitude * zoomSensitivity, minZoom, maxZoom);
+        if (targets.Count == 0) return;
 
-            // Smoothly transition to the new zoom level
-            cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, zoomFactor, lerpRate * Time.deltaTime);
+        Bounds bounds = new Bounds(targets[0].position, Vector3.zero);
+        foreach (Transform target in targets)
+        {
+            bounds.Encapsulate(target.position);
         }
+
+        float maxDistance = Mathf.Max(bounds.size.x, bounds.size.y);
+        targetSize = 10 + (maxDistance / 2.0f);
+
+        camera.orthographicSize = Mathf.SmoothDamp(camera.orthographicSize, targetSize, ref velocity, smoothTime);
     }
 }
