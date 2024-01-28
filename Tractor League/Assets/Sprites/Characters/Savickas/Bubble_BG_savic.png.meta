@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 50a87fde349d147c5aeee84326cf7dcf
+guid: dc4e7a846c707446c8ab0a247cadcfe6
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: nauseda faces-01_0
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 0
-        width: 416
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 148a18d4b06ff45bd96712436f2bc2cc
-      internalID: -188545023
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nauseda faces-01_1
-      rect:
-        serializedVersion: 2
-        x: 558
-        y: 0
-        width: 416
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0904d2b29201544cfa7259f443b62ab0
-      internalID: 1546715062
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nauseda faces-01_2
-      rect:
-        serializedVersion: 2
-        x: 1071
-        y: 0
-        width: 416
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c235ba77356da4da49eacadfa1f11b5f
-      internalID: -1735219759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: nauseda faces-01_3
-      rect:
-        serializedVersion: 2
-        x: 1584
-        y: 0
-        width: 416
-        height: 672
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cf18647163f9b4321b4a62445b5b2cad
-      internalID: -1034766830
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,11 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      nauseda faces-01_0: -188545023
-      nauseda faces-01_1: 1546715062
-      nauseda faces-01_2: -1735219759
-      nauseda faces-01_3: -1034766830
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 50a87fde349d147c5aeee84326cf7dcf
+guid: 1bf8f2717c3df49d69ac40ae4df83b35
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nauseda faces-01_0
+      name: Irena_emotions_0
       rect:
         serializedVersion: 2
-        x: 45
+        x: 24
         y: 0
-        width: 416
-        height: 672
+        width: 175
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 148a18d4b06ff45bd96712436f2bc2cc
-      internalID: -188545023
+      spriteID: d71ea20d8cfe04a4881bf85f47401120
+      internalID: -1926255579
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_1
+      name: Irena_emotions_1
       rect:
         serializedVersion: 2
-        x: 558
+        x: 254
         y: 0
-        width: 416
-        height: 672
+        width: 175
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0904d2b29201544cfa7259f443b62ab0
-      internalID: 1546715062
+      spriteID: de36d3500252f4284bd0d3f846f819c5
+      internalID: -1225660727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_2
+      name: Irena_emotions_2
       rect:
         serializedVersion: 2
-        x: 1071
+        x: 500
         y: 0
-        width: 416
-        height: 672
+        width: 175
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c235ba77356da4da49eacadfa1f11b5f
-      internalID: -1735219759
+      spriteID: 903271fefbd3348c8b74ad432acc126e
+      internalID: -1376095856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_3
+      name: Irena_emotions_3
       rect:
         serializedVersion: 2
-        x: 1584
+        x: 740
         y: 0
-        width: 416
-        height: 672
+        width: 175
+        height: 236
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf18647163f9b4321b4a62445b5b2cad
-      internalID: -1034766830
+      spriteID: cdd150affe56348c7813b6783cd5c16e
+      internalID: 1089407651
       vertices: []
       indices: 
       edges: []
@@ -217,10 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      nauseda faces-01_0: -188545023
-      nauseda faces-01_1: 1546715062
-      nauseda faces-01_2: -1735219759
-      nauseda faces-01_3: -1034766830
+      Irena_emotions_0: -1926255579
+      Irena_emotions_1: -1225660727
+      Irena_emotions_2: -1376095856
+      Irena_emotions_3: 1089407651
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

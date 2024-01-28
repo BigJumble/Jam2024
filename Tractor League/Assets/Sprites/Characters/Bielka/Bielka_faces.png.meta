@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 50a87fde349d147c5aeee84326cf7dcf
+guid: 5ae77d0f2b9764c8bbb6c9b21ef6ecba
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: nauseda faces-01_0
+      name: Bielka_faces_0
       rect:
         serializedVersion: 2
-        x: 45
-        y: 0
-        width: 416
-        height: 672
+        x: 14
+        y: 34
+        width: 255
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 148a18d4b06ff45bd96712436f2bc2cc
-      internalID: -188545023
+      spriteID: 38efbfc66324d44658d5a746b8630236
+      internalID: 1565146227
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_1
+      name: Bielka_faces_1
       rect:
         serializedVersion: 2
-        x: 558
-        y: 0
-        width: 416
-        height: 672
+        x: 327
+        y: 31
+        width: 258
+        height: 286
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0904d2b29201544cfa7259f443b62ab0
-      internalID: 1546715062
+      spriteID: b75feb85269d24447bef3c5cfe250652
+      internalID: -1354308263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_2
+      name: Bielka_faces_2
       rect:
         serializedVersion: 2
-        x: 1071
-        y: 0
-        width: 416
-        height: 672
+        x: 629
+        y: 34
+        width: 256
+        height: 283
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c235ba77356da4da49eacadfa1f11b5f
-      internalID: -1735219759
+      spriteID: 0a8cca01b989b44b6bfed714e92a6874
+      internalID: 1451142571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: nauseda faces-01_3
+      name: Bielka_faces_3
       rect:
         serializedVersion: 2
-        x: 1584
-        y: 0
-        width: 416
-        height: 672
+        x: 936
+        y: 66
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,8 +200,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cf18647163f9b4321b4a62445b5b2cad
-      internalID: -1034766830
+      spriteID: 58c09c0b203a349b0856d1168a0fa21b
+      internalID: 887403539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bielka_faces_4
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 31
+        width: 257
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 668fb04c97bfe488cba7f4de8f8c3f06
+      internalID: 1409539859
       vertices: []
       indices: 
       edges: []
@@ -217,10 +238,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      nauseda faces-01_0: -188545023
-      nauseda faces-01_1: 1546715062
-      nauseda faces-01_2: -1735219759
-      nauseda faces-01_3: -1034766830
+      Bielka_faces_0: 1565146227
+      Bielka_faces_1: -1354308263
+      Bielka_faces_2: 1451142571
+      Bielka_faces_3: 887403539
+      Bielka_faces_4: 1409539859
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
