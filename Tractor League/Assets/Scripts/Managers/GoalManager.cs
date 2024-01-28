@@ -7,6 +7,10 @@ public class GoalManager : MonoBehaviour
 {
     private Dictionary<PlayerManager.Team, int> teamScore;
 
+    public List<string> announcements;
+
+    public List<AudioClip> audioClips;
+
     private List<Furnace> furnaces;
 
     [SerializeField]
@@ -14,6 +18,15 @@ public class GoalManager : MonoBehaviour
 
     [SerializeField]
     private TextMeshProUGUI clock;
+
+    [SerializeField]
+    private TextMeshProUGUI announcement;
+
+    [SerializeField]
+    private Animator announceAnimator;
+
+    [SerializeField]
+    private AudioSource announceAudioSource;
 
     private void Start()
     {
@@ -42,6 +55,11 @@ public class GoalManager : MonoBehaviour
     {
         SetUIScore();
         SetClock();
+
+        if(Input.GetKeyDown(KeyCode.U))
+        {
+            OnGoalHandler(PlayerManager.Team.A);
+        }
     }
 
     private void SetUIScore()
@@ -63,5 +81,13 @@ public class GoalManager : MonoBehaviour
     private void OnGoalHandler(PlayerManager.Team team)
     {
         teamScore[team] += 1;
+
+        var idx = Random.Range(0, announcements.Count());
+
+        announcement.text = announcements[idx];
+
+        announceAnimator.SetTrigger("Say");
+
+        announceAudioSource.PlayOneShot(audioClips[idx]);
     }
 }
