@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7308216810491361073, guid: 5da52c7b21d0b401591a1ceab9393560, type: 3}
+      propertyPath: m_Volume
+      value: 0.4
+      objectReference: {fileID: 0}
     - target: {fileID: 7378609803649632762, guid: 5da52c7b21d0b401591a1ceab9393560, type: 3}
       propertyPath: m_Name
       value: Furnace
@@ -1153,7 +1157,8 @@ PrefabInstance:
       value: 2.02
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 3693806571124259019, guid: 5da52c7b21d0b401591a1ceab9393560, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5da52c7b21d0b401591a1ceab9393560, type: 3}
